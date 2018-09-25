@@ -1,0 +1,14 @@
+{
+    "name": "newblockstest",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "pidmx": "github:laboratoryforplayfulcomputation/pxt-pidmx#v1.0.16"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}
