@@ -1,6 +1,6 @@
 {
     "name": "piVJ",
-    "version": "1.0.26",
+    "version": "1.0.27",
     "description": "blocks for working with VJing tools over serial on pi",
     "license": "MIT",
     "dependencies": {
