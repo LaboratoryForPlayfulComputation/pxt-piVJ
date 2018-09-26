@@ -34,7 +34,7 @@ namespace vj {
     //% weight=90
     //% blockId=youtube_mute block="mute video" blockGap=8
     export function mute(): void {
-        serial.writeLine("mute 1");
+        serial.writeLine("mute:1");
     }
 
     /**
@@ -43,7 +43,7 @@ namespace vj {
     //% weight=90
     //% blockId=youtube_unmute block="unmute video" blockGap=8
     export function unmute(): void {
-        serial.writeLine("mute 0");
+        serial.writeLine("mute:0");
     }    
   
     /**
@@ -52,7 +52,7 @@ namespace vj {
     //% weight=90
     //% blockId=youtube_setvideo block="set video by id %id" blockGap=8
     export function setVideoById(id: string): void {
-        let command = "id " + id;
+        let command = "id:" + id;
         serial.writeLine(command);
     }    
 
@@ -64,7 +64,7 @@ namespace vj {
     //% blockId=youtube_setrate block="set playback rate %speed| %" blockGap=8
     //% speed.min=0 speed.max=200
     export function setPlaybackRate(speed: number): void {
-        let command = "scaledspeed " + speed;
+        let command = "scaledspeed:" + speed;
         serial.writeLine(command);
     }  
 
@@ -77,7 +77,7 @@ namespace vj {
         let hoursToSeconds = hour * 60 * 60;
         let minutesToSeconds = minute * 60;
         let time = hour + minute + second; 
-        let command = "seek " + time;
+        let command = "seek:" + time;
         serial.writeLine(command);
     }  
 
@@ -87,7 +87,7 @@ namespace vj {
     //% weight=90
     //% blockId=youtube_setvolume block="set volume %volume" blockGap=8
     export function setVolume(volume: number): void {
-        let command = "volume " + volume;
+        let command = "volume:" + volume;
         serial.writeLine(command);
     }  
 
